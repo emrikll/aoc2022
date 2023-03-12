@@ -58,13 +58,13 @@ fn main(){
 
     let num = splited_game.len();
 
-    //let mut finished_data: Vec<String> = Vec::new();
+    let mut finished_data: Vec<String> = Vec::new();
 
     let mut finished_data_part2: Vec<Vec<&str>> = Vec::new();
 
-    //for game in splited_game{
-        //finished_data.push(check_duplicate(game))
-    //}
+    for game in &splited_game{
+        finished_data.push(check_duplicate(game))
+    }
 
     for x in (0..num).step_by(3) {
         let mut new_list: Vec<&str> = Vec::new();
@@ -74,7 +74,7 @@ fn main(){
         finished_data_part2.push(new_list);
     }
     
-    //print!("part 1: {}", part1(finished_data))
-    print!("part 2: {}", part2(finished_data_part2))
+    print!("part 1: {} \n", part1(finished_data));
+    print!("part 2: {} \n", part2(finished_data_part2));
 
 }

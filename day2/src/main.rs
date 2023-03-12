@@ -26,14 +26,21 @@ fn part2(data: Vec<Vec<&str>>) -> i32{
 }
 
 fn get_points_shape(shape: &str) -> i32{
-    if shape == "A" || shape =="X"{
-        return 1
-    }else if shape == "B" || shape == "Y"{
-        return 2
-    }else if shape == "C" || shape == "Z"{
-        return 3
-    }else{
-        return -1
+    //if shape == "A" || shape =="X"{
+    //    return 1
+    //}else if shape == "B" || shape == "Y"{
+    //    return 2
+    //}else if shape == "C" || shape == "Z"{
+    //    return 3
+    //}else{
+    //    return -1
+    //}
+
+    match shape{
+        "A"|"X" => return 1,
+        "B"|"Y" => return 2,
+        "C"|"Z" => return 3,
+        _ => return -1
     }
 }
 
